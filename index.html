@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkish POS Tagger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tagger-container">
+        <div class="accent-bar"></div> 
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        <h1>Turkish POS Tagger</h1>
+        <p class="subtitle">Enter a sentence to see the morphological analysis.</p>
+
+        <div class="input-container">
+            <input
+                type="text"
+                id="sentence-input"
+                placeholder="Enter Turkish sentence"
+                autocomplete="off"
+            />
+            </div>
+
+        <div class="button-group">
+            <button type="button" class="btn">ç</button>
+            <button type="button" class="btn">ğ</button>
+            <button type="button" class="btn">ı</button>
+            <button type="button" class="btn">ö</button>
+            <button type="button" class="btn">ş</button>
+            <button type="button" class="btn">ü</button>
+        </div>
+
+        <div id="result-container" class="result-container">
+            </div>
+    </div>
+
+    <div id="tooltip" class="custom-tooltip"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
